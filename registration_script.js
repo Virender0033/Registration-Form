@@ -29,8 +29,8 @@ form.addEventListener("submit", function (event) {
 
     if (password === "") {
         passwordError.textContent = "Password is required.";
-    } else if (password.length < 6) {
-        passwordError.textContent = "Password must be at least 6 characters long.";
+    } else if (password.length < 8) {
+        passwordError.textContent = "Password must be at least 8 characters long.";
     }
 
     // If all fields are valid, submit the form
@@ -39,7 +39,7 @@ form.addEventListener("submit", function (event) {
         email !== "" &&
         isValidEmail(email) &&
         password !== "" &&
-        password.length >= 6
+        password.length >= 8
     ) {
     // You can replace this with actual form submission logic
     alert("Form submitted successfully!");
